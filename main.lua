@@ -1248,3 +1248,11 @@ end
  
 end
 )(1,15,4,1,14,'number',71,1,0,9,39,126,126,2,nil,14,83,10,0,3,4,9,1,7,164,79,nil,0,1)
+-- 🔧 Parche para forzar el nombre de la barra
+task.delay(2, function()
+    for _, v in pairs(game.CoreGui:GetDescendants()) do
+        if v:IsA("TextLabel") and string.find(v.Text, "open") then
+            v.Text = "open XRNL HUB"
+        end
+    end
+end)
